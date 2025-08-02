@@ -21,12 +21,14 @@ import { Privacy } from "./pages/Privacy";
 import { Notifications } from "./pages/Notifications";
 import { ExecutiveDashboard } from "./pages/ExecutiveDashboard";
 import { Consulting } from "./pages/Consulting";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+    <LanguageProvider>
+      <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
@@ -52,6 +54,7 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
+  </LanguageProvider>
   </QueryClientProvider>
 );
 

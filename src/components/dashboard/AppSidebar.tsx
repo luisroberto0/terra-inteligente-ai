@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { BarChart3, TrendingUp, History, User, Leaf, LogOut, Bell, Crown, UserCheck } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 import {
   Sidebar,
@@ -15,21 +16,22 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
-const items = [
-  { title: "Diagnósticos", url: "/dashboard", icon: BarChart3 },
-  { title: "Dashboard Avançado", url: "/dashboard/advanced", icon: TrendingUp },
-  { title: "Painel Executivo", url: "/dashboard/executive", icon: Crown },
-  { title: "Consultoria", url: "/dashboard/consulting", icon: UserCheck },
-  { title: "Notificações", url: "/dashboard/notifications", icon: Bell },
-  { title: "Histórico", url: "/dashboard/history", icon: History },
-  { title: "Conta", url: "/dashboard/account", icon: User },
-]
-
 export function AppSidebar() {
   const { state } = useSidebar()
   const location = useLocation()
+  const { t } = useLanguage()
   const currentPath = location.pathname
   const collapsed = state === "collapsed"
+
+  const items = [
+    { title: t('dashboard.diagnostics'), url: "/dashboard", icon: BarChart3 },
+    { title: t('dashboard.advanced'), url: "/dashboard/advanced", icon: TrendingUp },
+    { title: t('dashboard.executive'), url: "/dashboard/executive", icon: Crown },
+    { title: t('dashboard.consulting'), url: "/dashboard/consulting", icon: UserCheck },
+    { title: t('dashboard.notifications'), url: "/dashboard/notifications", icon: Bell },
+    { title: t('dashboard.history'), url: "/dashboard/history", icon: History },
+    { title: t('dashboard.account'), url: "/dashboard/account", icon: User },
+  ]
 
   const isActive = (path: string) => currentPath === path
   const getNavCls = ({ isActive }: { isActive: boolean }) =>
@@ -73,7 +75,7 @@ export function AppSidebar() {
                     className="hover:bg-muted/50 text-destructive hover:text-destructive"
                   >
                     <LogOut className="h-4 w-4" />
-                    {!collapsed && <span>Sair</span>}
+                    {!collapsed && <span>{t('dashboard.logout')}</span>}
                   </button>
                 </SidebarMenuButton>
               </SidebarMenuItem>

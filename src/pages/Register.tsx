@@ -7,6 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Leaf, User, Building, MapPin, Sprout, Mail, Lock, Eye, EyeOff } from "lucide-react"
 import { Link, useNavigate } from "react-router-dom"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export const Register = () => {
   const [formData, setFormData] = useState({
@@ -24,6 +25,7 @@ export const Register = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [acceptTerms, setAcceptTerms] = useState(false)
   const navigate = useNavigate()
+  const { t } = useLanguage()
 
   const brazilianStates = [
     "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", 
@@ -57,17 +59,17 @@ export const Register = () => {
             <Leaf className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold text-primary">AgroInsight AI</span>
           </Link>
-          <h1 className="text-3xl font-bold">Crie sua conta</h1>
+          <h1 className="text-3xl font-bold">{t('auth.createAccount')}</h1>
           <p className="text-muted-foreground mt-2">
-            Comece a usar o AgroInsight AI gratuitamente
+            {t('auth.joinAgroInsight')}
           </p>
         </div>
 
         <Card className="shadow-lg">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl text-center">Cadastro</CardTitle>
+            <CardTitle className="text-2xl text-center">{t('auth.signUp')}</CardTitle>
             <CardDescription className="text-center">
-              Preencha as informações para criar sua conta
+              {t('auth.createAccount')}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -81,7 +83,7 @@ export const Register = () => {
                 
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="fullName">Nome completo</Label>
+                    <Label htmlFor="fullName">{t('auth.name')}</Label>
                     <Input
                       id="fullName"
                       placeholder="Seu nome completo"
@@ -92,7 +94,7 @@ export const Register = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="email">E-mail</Label>
+                    <Label htmlFor="email">{t('auth.email')}</Label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
@@ -197,7 +199,7 @@ export const Register = () => {
                 
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
-                    <Label htmlFor="password">Senha</Label>
+                    <Label htmlFor="password">{t('auth.password')}</Label>
                     <div className="relative">
                       <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
@@ -221,7 +223,7 @@ export const Register = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="confirmPassword">Confirmar senha</Label>
+                    <Label htmlFor="confirmPassword">{t('auth.confirmPassword')}</Label>
                     <div className="relative">
                       <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
@@ -264,14 +266,14 @@ export const Register = () => {
               </div>
 
               <Button type="submit" className="w-full" size="lg" variant="hero">
-                Criar conta
+                {t('auth.createAccount')}
               </Button>
             </form>
 
             <div className="text-center text-sm text-muted-foreground">
-              Já tem uma conta?{" "}
+              {t('auth.alreadyHaveAccount')}{" "}
               <Link to="/login" className="text-primary hover:underline font-medium">
-                Fazer login
+                {t('auth.signIn')}
               </Link>
             </div>
           </CardContent>

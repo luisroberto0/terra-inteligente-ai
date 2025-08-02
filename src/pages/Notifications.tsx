@@ -9,16 +9,18 @@ import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Bell, Mail, MessageSquare, Thermometer, AlertTriangle, TrendingDown } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { toast } from "sonner";
 
 export function Notifications() {
+  const { t } = useLanguage();
   const [emailEnabled, setEmailEnabled] = useState(true);
   const [smsEnabled, setSmsEnabled] = useState(false);
   const [viabilityThreshold, setViabilityThreshold] = useState("50");
   const [productivityThreshold, setProductivityThreshold] = useState("60");
 
   const handleSaveSettings = () => {
-    toast.success("Configurações de notificações salvas com sucesso!");
+    toast.success(t('messages.success.settingsSaved'));
   };
 
   return (
@@ -27,8 +29,8 @@ export function Notifications() {
       
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">Notificações Personalizadas</h1>
-          <p className="text-muted-foreground">Configure como e quando receber alertas importantes sobre suas culturas</p>
+          <h1 className="text-3xl font-bold text-foreground mb-2">{t('notifications.title')}</h1>
+          <p className="text-muted-foreground">{t('notifications.subtitle')}</p>
         </div>
 
         <div className="grid gap-6">
@@ -37,10 +39,10 @@ export function Notifications() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Bell className="h-5 w-5 text-primary" />
-                Canais de Notificação
+                {t('notifications.channels')}
               </CardTitle>
               <CardDescription>
-                Escolha como deseja receber os alertas do AgroInsight AI
+                {t('notifications.subtitle')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -48,8 +50,8 @@ export function Notifications() {
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
-                    <Label htmlFor="email-notifications" className="text-base font-medium">E-mail</Label>
-                    <p className="text-sm text-muted-foreground">Receba alertas por e-mail</p>
+                    <Label htmlFor="email-notifications" className="text-base font-medium">{t('notifications.email')}</Label>
+                    <p className="text-sm text-muted-foreground">{t('notifications.emailDesc')}</p>
                   </div>
                 </div>
                 <Switch
@@ -63,8 +65,8 @@ export function Notifications() {
                 <div className="flex items-center space-x-3">
                   <MessageSquare className="h-5 w-5 text-primary" />
                   <div>
-                    <Label htmlFor="sms-notifications" className="text-base font-medium">SMS</Label>
-                    <p className="text-sm text-muted-foreground">Receba alertas por mensagem de texto</p>
+                    <Label htmlFor="sms-notifications" className="text-base font-medium">{t('notifications.sms')}</Label>
+                    <p className="text-sm text-muted-foreground">{t('notifications.smsDesc')}</p>
                   </div>
                 </div>
                 <Switch
@@ -76,7 +78,7 @@ export function Notifications() {
 
               {smsEnabled && (
                 <div className="ml-8 space-y-2">
-                  <Label htmlFor="phone">Número do telefone</Label>
+                  <Label htmlFor="phone">{t('notifications.phoneNumber')}</Label>
                   <Input
                     id="phone"
                     placeholder="(11) 99999-9999"
@@ -92,10 +94,10 @@ export function Notifications() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <AlertTriangle className="h-5 w-5 text-primary" />
-                Tipos de Alertas
+                {t('notifications.alertTypes')}
               </CardTitle>
               <CardDescription>
-                Configure quais eventos devem gerar notificações
+                {t('notifications.thresholdsDesc')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -104,8 +106,8 @@ export function Notifications() {
                   <div className="flex items-center space-x-3">
                     <TrendingDown className="h-5 w-5 text-destructive" />
                     <div>
-                      <h4 className="font-medium">Viabilidade Baixa</h4>
-                      <p className="text-sm text-muted-foreground">Quando a viabilidade do solo estiver abaixo do limite</p>
+                      <h4 className="font-medium">{t('notifications.lowViability')}</h4>
+                      <p className="text-sm text-muted-foreground">{t('notifications.lowViabilityDesc')}</p>
                     </div>
                   </div>
                   <Switch defaultChecked />
@@ -115,8 +117,8 @@ export function Notifications() {
                   <div className="flex items-center space-x-3">
                     <Thermometer className="h-5 w-5 text-destructive" />
                     <div>
-                      <h4 className="font-medium">Clima Extremo</h4>
-                      <p className="text-sm text-muted-foreground">Alertas sobre condições climáticas adversas</p>
+                      <h4 className="font-medium">{t('notifications.extremeWeather')}</h4>
+                      <p className="text-sm text-muted-foreground">{t('notifications.extremeWeatherDesc')}</p>
                     </div>
                   </div>
                   <Switch defaultChecked />
@@ -126,8 +128,8 @@ export function Notifications() {
                   <div className="flex items-center space-x-3">
                     <AlertTriangle className="h-5 w-5 text-destructive" />
                     <div>
-                      <h4 className="font-medium">Falha na Análise</h4>
-                      <p className="text-sm text-muted-foreground">Quando houver problemas no processamento</p>
+                      <h4 className="font-medium">{t('notifications.analysisFailure')}</h4>
+                      <p className="text-sm text-muted-foreground">{t('notifications.analysisFailureDesc')}</p>
                     </div>
                   </div>
                   <Switch defaultChecked />
@@ -139,17 +141,17 @@ export function Notifications() {
           {/* Limites de Alerta */}
           <Card>
             <CardHeader>
-              <CardTitle>Configurar Limites</CardTitle>
+              <CardTitle>{t('notifications.thresholds')}</CardTitle>
               <CardDescription>
-                Defina os valores que irão disparar os alertas automáticos
+                {t('notifications.thresholdsDesc')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="viability">Viabilidade do Solo (%)</Label>
+                  <Label htmlFor="viability">{t('notifications.soilViability')}</Label>
                   <div className="flex items-center space-x-2">
-                    <span className="text-sm text-muted-foreground">Alertar quando &lt;</span>
+                    <span className="text-sm text-muted-foreground">{t('notifications.alertWhen')}</span>
                     <Input
                       id="viability"
                       type="number"
@@ -164,9 +166,9 @@ export function Notifications() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="productivity">Produtividade (%)</Label>
+                  <Label htmlFor="productivity">{t('notifications.productivity')}</Label>
                   <div className="flex items-center space-x-2">
-                    <span className="text-sm text-muted-foreground">Alertar quando &lt;</span>
+                    <span className="text-sm text-muted-foreground">{t('notifications.alertWhen')}</span>
                     <Input
                       id="productivity"
                       type="number"
@@ -182,10 +184,10 @@ export function Notifications() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="custom-conditions">Condições Personalizadas</Label>
+                <Label htmlFor="custom-conditions">{t('notifications.customConditions')}</Label>
                 <Textarea
                   id="custom-conditions"
-                  placeholder="Descreva outras condições específicas para sua propriedade..."
+                  placeholder={t('notifications.customConditionsPlaceholder')}
                   className="min-h-[100px]"
                 />
               </div>
@@ -194,8 +196,8 @@ export function Notifications() {
 
           {/* Botões de Ação */}
           <div className="flex justify-end space-x-4">
-            <Button variant="outline">Cancelar</Button>
-            <Button onClick={handleSaveSettings}>Salvar Configurações</Button>
+            <Button variant="outline">{t('actions.cancel')}</Button>
+            <Button onClick={handleSaveSettings}>{t('notifications.saveSettings')}</Button>
           </div>
         </div>
       </main>
