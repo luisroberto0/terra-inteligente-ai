@@ -179,7 +179,119 @@ export const ptTranslations = {
     gdprCompliance: "Conformidade com LGPD/GDPR",
     dataProcessing: "Processamento de Dados",
     userRights: "Direitos do Usuário",
-    contact: "Contato para Privacidade"
+    contact: "Contato para Privacidade",
+    backToHome: "Voltar para o início"
+  },
+
+  // Account Settings
+  account: {
+    settings: "Configurações da Conta",
+    profile: "Perfil",
+    preferences: "Preferências",
+    notifications: "Notificações",
+    security: "Segurança",
+    danger: "Zona de Perigo",
+    personalInfo: "Informações Pessoais",
+    farmInfo: "Informações da Propriedade",
+    language: "Idioma",
+    deleteAccount: "Deletar Conta",
+    deleteAccountWarning: "Esta ação é irreversível. Todos os seus dados serão permanentemente excluídos.",
+    confirmDelete: "Confirmar Exclusão",
+    updateProfile: "Atualizar Perfil"
+  },
+
+  // Team Management
+  team: {
+    title: "Gerenciar Equipe",
+    subtitle: "Gerencie membros da equipe e suas permissões",
+    addMember: "Adicionar Membro",
+    members: "Membros da Equipe",
+    role: "Função",
+    permissions: "Permissões",
+    status: "Status",
+    lastActive: "Último Acesso",
+    inviteMember: "Convidar Membro",
+    admin: "Administrador",
+    member: "Membro",
+    viewer: "Visualizador",
+    pending: "Pendente",
+    active: "Ativo",
+    actions: "Ações",
+    removeMember: "Remover Membro",
+    upgradeRequired: "Disponível apenas no plano Profissional"
+  },
+
+  // API & Integrations
+  api: {
+    title: "API e Integrações",
+    subtitle: "Gerencie suas integrações e acesso à API",
+    apiKey: "Chave da API",
+    regenerateKey: "Regenerar Chave",
+    copyKey: "Copiar Chave",
+    apiDocs: "Documentação da API",
+    webhooks: "Webhooks",
+    addWebhook: "Adicionar Webhook",
+    webhookUrl: "URL do Webhook",
+    events: "Eventos",
+    testWebhook: "Testar Webhook",
+    integrations: "Integrações Disponíveis",
+    zapier: "Zapier",
+    slack: "Slack",
+    email: "E-mail"
+  },
+
+  // History/Reports
+  history: {
+    title: "Histórico de Diagnósticos",
+    subtitle: "Visualize e gerencie todos os seus diagnósticos anteriores",
+    filterBy: "Filtrar por",
+    dateRange: "Período",
+    cropType: "Tipo de Cultura",
+    analysisType: "Tipo de Análise",
+    exportPdf: "Exportar PDF",
+    exportCsv: "Exportar CSV",
+    viewDetails: "Ver Detalhes",
+    diagnosticDate: "Data do Diagnóstico",
+    result: "Resultado",
+    recommendation: "Recomendação",
+    noResults: "Nenhum diagnóstico encontrado",
+    allCrops: "Todas as Culturas",
+    allTypes: "Todos os Tipos"
+  },
+
+  // Alert Center
+  alerts: {
+    title: "Central de Alertas",
+    newAlert: "Novo Alerta",
+    markAllRead: "Marcar Todos como Lidos",
+    noAlerts: "Nenhum alerta no momento",
+    lowViability: "Viabilidade Baixa",
+    extremeWeather: "Clima Extremo",
+    systemUpdate: "Atualização do Sistema",
+    timeAgo: "há",
+    minutes: "minutos",
+    hours: "horas",
+    days: "dias"
+  },
+
+  // Demo
+  demo: {
+    title: "Demonstração do AgroInsight AI",
+    subtitle: "Veja como nossa IA pode ajudar sua propriedade rural",
+    uploadImage: "Carregar Imagem",
+    analyzeCrop: "Analisar Cultura",
+    sampleAnalysis: "Análise de Exemplo",
+    tryNow: "Experimente Agora"
+  },
+
+  // Countries - International
+  countries: {
+    brazil: "Brasil",
+    usa: "Estados Unidos",
+    argentina: "Argentina",
+    canada: "Canadá",
+    mexico: "México",
+    other: "Outro"
   },
 
   // Messages

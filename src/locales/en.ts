@@ -179,7 +179,119 @@ export const enTranslations = {
     gdprCompliance: "GDPR/LGPD Compliance",
     dataProcessing: "Data Processing",
     userRights: "User Rights",
-    contact: "Privacy Contact"
+    contact: "Privacy Contact",
+    backToHome: "Back to Home"
+  },
+
+  // Account Settings
+  account: {
+    settings: "Account Settings",
+    profile: "Profile",
+    preferences: "Preferences",
+    notifications: "Notifications",
+    security: "Security",
+    danger: "Danger Zone",
+    personalInfo: "Personal Information",
+    farmInfo: "Farm Information",
+    language: "Language",
+    deleteAccount: "Delete Account",
+    deleteAccountWarning: "This action is irreversible. All your data will be permanently deleted.",
+    confirmDelete: "Confirm Deletion",
+    updateProfile: "Update Profile"
+  },
+
+  // Team Management
+  team: {
+    title: "Team Management",
+    subtitle: "Manage team members and their permissions",
+    addMember: "Add Member",
+    members: "Team Members",
+    role: "Role",
+    permissions: "Permissions",
+    status: "Status",
+    lastActive: "Last Active",
+    inviteMember: "Invite Member",
+    admin: "Administrator",
+    member: "Member",
+    viewer: "Viewer",
+    pending: "Pending",
+    active: "Active",
+    actions: "Actions",
+    removeMember: "Remove Member",
+    upgradeRequired: "Available only on Professional plan"
+  },
+
+  // API & Integrations
+  api: {
+    title: "API & Integrations",
+    subtitle: "Manage your integrations and API access",
+    apiKey: "API Key",
+    regenerateKey: "Regenerate Key",
+    copyKey: "Copy Key",
+    apiDocs: "API Documentation",
+    webhooks: "Webhooks",
+    addWebhook: "Add Webhook",
+    webhookUrl: "Webhook URL",
+    events: "Events",
+    testWebhook: "Test Webhook",
+    integrations: "Available Integrations",
+    zapier: "Zapier",
+    slack: "Slack",
+    email: "Email"
+  },
+
+  // History/Reports
+  history: {
+    title: "Diagnostics History",
+    subtitle: "View and manage all your previous diagnostics",
+    filterBy: "Filter by",
+    dateRange: "Date Range",
+    cropType: "Crop Type",
+    analysisType: "Analysis Type",
+    exportPdf: "Export PDF",
+    exportCsv: "Export CSV",
+    viewDetails: "View Details",
+    diagnosticDate: "Diagnostic Date",
+    result: "Result",
+    recommendation: "Recommendation",
+    noResults: "No diagnostics found",
+    allCrops: "All Crops",
+    allTypes: "All Types"
+  },
+
+  // Alert Center
+  alerts: {
+    title: "Alert Center",
+    newAlert: "New Alert",
+    markAllRead: "Mark All as Read",
+    noAlerts: "No alerts at the moment",
+    lowViability: "Low Viability",
+    extremeWeather: "Extreme Weather",
+    systemUpdate: "System Update",
+    timeAgo: "ago",
+    minutes: "minutes",
+    hours: "hours",
+    days: "days"
+  },
+
+  // Demo
+  demo: {
+    title: "AgroInsight AI Demo",
+    subtitle: "See how our AI can help your farm",
+    uploadImage: "Upload Image",
+    analyzeCrop: "Analyze Crop",
+    sampleAnalysis: "Sample Analysis",
+    tryNow: "Try Now"
+  },
+
+  // Countries - International
+  countries: {
+    brazil: "Brazil",
+    usa: "United States",
+    argentina: "Argentina",
+    canada: "Canada",
+    mexico: "Mexico",
+    other: "Other"
   },
 
   // Messages

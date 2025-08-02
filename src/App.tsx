@@ -21,6 +21,8 @@ import { Privacy } from "./pages/Privacy";
 import { Notifications } from "./pages/Notifications";
 import { ExecutiveDashboard } from "./pages/ExecutiveDashboard";
 import { Consulting } from "./pages/Consulting";
+import { TeamManagement } from "./pages/TeamManagement";
+import { ApiIntegrations } from "./pages/ApiIntegrations";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 const queryClient = new QueryClient();
@@ -43,6 +45,8 @@ const App = () => (
           <Route path="/dashboard/notifications" element={<Notifications />} />
           <Route path="/dashboard/history" element={<History />} />
           <Route path="/dashboard/account" element={<Account />} />
+          <Route path="/dashboard/team" element={<TeamManagement />} />
+          <Route path="/dashboard/api" element={<ApiIntegrations />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />

@@ -1,15 +1,17 @@
 import { ArrowLeft, Shield } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export const Privacy = () => {
+  const { t } = useLanguage()
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/30">
       <div className="container py-8">
         <div className="mb-6">
           <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Voltar para o início
+            {t('legal.backToHome')}
           </Link>
         </div>
 
@@ -18,11 +20,11 @@ export const Privacy = () => {
             <div className="flex items-center justify-center gap-2 mb-4">
               <Shield className="h-6 w-6 text-primary" />
               <h1 className="text-3xl font-bold text-foreground">
-                Política de Privacidade
+                {t('legal.privacyTitle')}
               </h1>
             </div>
             <p className="text-muted-foreground">
-              Última atualização: Janeiro de 2024
+              {t('legal.lastUpdated')}: Janeiro de 2024
             </p>
           </div>
 
