@@ -17,8 +17,10 @@ import {
 } from "lucide-react"
 import { Link } from "react-router-dom"
 import heroImage from "@/assets/hero-agriculture.jpg"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export const Landing = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -31,25 +33,23 @@ export const Landing = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                  <span className="text-primary">Diagnóstico Inteligente</span>{" "}
-                  para Suas Culturas
+                  <span className="text-primary">{t('landing.title')}</span>
                 </h1>
                 <p className="text-xl text-muted-foreground md:text-2xl">
-                  Descubra o que está acontecendo com sua plantação em segundos 
-                  com ajuda de IA.
+                  {t('landing.subtitle')}
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/register">
                   <Button size="xl" variant="hero" className="w-full sm:w-auto">
-                    Comece agora grátis
+                    {t('landing.heroButton')}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link to="/demo">
                   <Button size="xl" variant="outline" className="w-full sm:w-auto">
-                    Ver demonstração
+                    {t('landing.demoButton')}
                   </Button>
                 </Link>
               </div>

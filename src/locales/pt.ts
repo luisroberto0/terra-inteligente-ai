@@ -145,6 +145,43 @@ export const ptTranslations = {
     faq: "Perguntas Frequentes"
   },
 
+  // Landing
+  landing: {
+    title: "Diagnóstico Inteligente para Suas Culturas",
+    subtitle: "Descubra o que está acontecendo com sua plantação em segundos com ajuda de IA.",
+    heroButton: "Comece agora grátis",
+    demoButton: "Ver demonstração",
+    howItWorks: "Como Funciona",
+    features: "Recursos Principais",
+    testimonials: "Depoimentos"
+  },
+
+  // Register - International
+  register: {
+    country: "País",
+    state: "Estado/Província",
+    farmInfo: "Informações da Propriedade",
+    personalInfo: "Informações Pessoais",
+    security: "Segurança",
+    farmName: "Nome da fazenda",
+    farmSize: "Tamanho da propriedade",
+    city: "Cidade",
+    cropType: "Tipo de cultivo principal",
+    acceptTerms: "Aceito os Termos de Uso e Política de Privacidade"
+  },
+
+  // Terms & Privacy
+  legal: {
+    termsTitle: "Termos de Uso",
+    privacyTitle: "Política de Privacidade",
+    lastUpdated: "Última atualização",
+    effectiveDate: "Data de vigência",
+    gdprCompliance: "Conformidade com LGPD/GDPR",
+    dataProcessing: "Processamento de Dados",
+    userRights: "Direitos do Usuário",
+    contact: "Contato para Privacidade"
+  },
+
   // Messages
   messages: {
     success: {

@@ -145,6 +145,43 @@ export const enTranslations = {
     faq: "Frequently Asked Questions"
   },
 
+  // Landing
+  landing: {
+    title: "Smart Diagnosis for Your Crops",
+    subtitle: "Discover what's happening with your plantation in seconds with AI assistance.",
+    heroButton: "Start Free",
+    demoButton: "View Demo",
+    howItWorks: "How It Works",
+    features: "Key Features",
+    testimonials: "Testimonials"
+  },
+
+  // Register - International
+  register: {
+    country: "Country",
+    state: "State/Province",
+    farmInfo: "Farm Information",
+    personalInfo: "Personal Information",
+    security: "Security",
+    farmName: "Farm name",
+    farmSize: "Farm size",
+    city: "City",
+    cropType: "Main crop type",
+    acceptTerms: "I accept the Terms of Service and Privacy Policy"
+  },
+
+  // Terms & Privacy
+  legal: {
+    termsTitle: "Terms of Service",
+    privacyTitle: "Privacy Policy",
+    lastUpdated: "Last updated",
+    effectiveDate: "Effective date",
+    gdprCompliance: "GDPR/LGPD Compliance",
+    dataProcessing: "Data Processing",
+    userRights: "User Rights",
+    contact: "Privacy Contact"
+  },
+
   // Messages
   messages: {
     success: {
