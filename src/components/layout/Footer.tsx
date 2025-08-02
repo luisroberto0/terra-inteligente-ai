@@ -1,7 +1,9 @@
 import { Leaf } from "lucide-react"
 import { Link } from "react-router-dom"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="border-t bg-background">
       <div className="container py-8 md:py-12">
@@ -17,11 +19,11 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-sm font-semibold mb-3">Empresa</h4>
+            <h4 className="text-sm font-semibold mb-3">{t('footer.company')}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/about" className="hover:text-foreground transition-colors">Sobre</Link></li>
-              <li><Link to="/contact" className="hover:text-foreground transition-colors">Contato</Link></li>
-              <li><Link to="/pricing" className="hover:text-foreground transition-colors">Preços</Link></li>
+              <li><Link to="/about" className="hover:text-foreground transition-colors">{t('nav.about')}</Link></li>
+              <li><Link to="/contact" className="hover:text-foreground transition-colors">{t('nav.contact')}</Link></li>
+              <li><Link to="/pricing" className="hover:text-foreground transition-colors">{t('nav.pricing')}</Link></li>
             </ul>
           </div>
           
