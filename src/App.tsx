@@ -37,6 +37,10 @@ import { AdminResources } from "./pages/admin/AdminResources";
 import { AdminLogs } from "./pages/admin/AdminLogs";
 import { AdminReports } from "./pages/admin/AdminReports";
 import { AdminIntegrations } from "./pages/admin/AdminIntegrations";
+import { ConsultantManagement } from "./pages/admin/ConsultantManagement";
+import { ConsultantRegistration } from "./pages/ConsultantRegistration";
+import { ConsultantDashboard } from "./pages/dashboard/ConsultantDashboard";
+import { ConsultantFinancial } from "./pages/dashboard/ConsultantFinancial";
 
 const queryClient = new QueryClient();
 
@@ -80,6 +84,12 @@ const App = () => (
           <Route path="/admin/logs" element={<AdminLogs />} />
           <Route path="/admin/reports" element={<AdminReports />} />
           <Route path="/admin/integrations" element={<AdminIntegrations />} />
+          <Route path="/admin/consultants" element={<ConsultantManagement />} />
+          
+          {/* Consultant Routes */}
+          <Route path="/consultor/inscricao" element={<ConsultantRegistration />} />
+          <Route path="/dashboard/consultant" element={<ConsultantDashboard />} />
+          <Route path="/dashboard/consultant/extrato" element={<ConsultantFinancial />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
