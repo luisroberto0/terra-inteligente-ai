@@ -13,6 +13,20 @@ export const Header = () => {
               AgroInsight AI
             </span>
           </Link>
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/demo" className="text-muted-foreground hover:text-foreground transition-colors">
+              Demonstração
+            </Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+              Preços
+            </Link>
+            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+              Sobre
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              Contato
+            </Link>
+          </nav>
         </div>
         
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

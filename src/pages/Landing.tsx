@@ -47,7 +47,7 @@ export const Landing = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link to="/dashboard">
+                <Link to="/demo">
                   <Button size="xl" variant="outline" className="w-full sm:w-auto">
                     Ver demonstração
                   </Button>

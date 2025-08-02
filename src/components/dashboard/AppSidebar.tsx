@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { BarChart3, History, User, Leaf, LogOut } from "lucide-react"
+import { BarChart3, TrendingUp, History, User, Leaf, LogOut } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
 
 import {
@@ -17,6 +17,7 @@ import {
 
 const items = [
   { title: "Diagnósticos", url: "/dashboard", icon: BarChart3 },
+  { title: "Dashboard Avançado", url: "/dashboard/advanced", icon: TrendingUp },
   { title: "Histórico", url: "/dashboard/history", icon: History },
   { title: "Conta", url: "/dashboard/account", icon: User },
 ]
