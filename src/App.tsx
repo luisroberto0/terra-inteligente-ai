@@ -18,6 +18,9 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Terms } from "./pages/Terms";
 import { Privacy } from "./pages/Privacy";
+import { Notifications } from "./pages/Notifications";
+import { ExecutiveDashboard } from "./pages/ExecutiveDashboard";
+import { Consulting } from "./pages/Consulting";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +36,9 @@ const App = () => (
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/advanced" element={<AdvancedDashboard />} />
+          <Route path="/dashboard/executive" element={<ExecutiveDashboard />} />
+          <Route path="/dashboard/consulting" element={<Consulting />} />
+          <Route path="/dashboard/notifications" element={<Notifications />} />
           <Route path="/dashboard/history" element={<History />} />
           <Route path="/dashboard/account" element={<Account />} />
           <Route path="/demo" element={<Demo />} />
