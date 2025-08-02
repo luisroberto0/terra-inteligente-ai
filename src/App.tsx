@@ -25,6 +25,14 @@ import { TeamManagement } from "./pages/TeamManagement";
 import { ApiIntegrations } from "./pages/ApiIntegrations";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
+// Admin Pages
+import { AdminDashboard } from "./pages/admin/AdminDashboard";
+import { UserManagement } from "./pages/admin/UserManagement";
+import { PlanManagement } from "./pages/admin/PlanManagement";
+import { FinancialManagement } from "./pages/admin/FinancialManagement";
+import { AdminNotifications } from "./pages/admin/AdminNotifications";
+import { AdminSettings } from "./pages/admin/AdminSettings";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -53,6 +61,16 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/users" element={<UserManagement />} />
+          <Route path="/admin/plans" element={<PlanManagement />} />
+          <Route path="/admin/financial" element={<FinancialManagement />} />
+          <Route path="/admin/notifications" element={<AdminNotifications />} />
+          <Route path="/admin/settings" element={<AdminSettings />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
